@@ -1,5 +1,5 @@
+USE userdb;
 DROP TABLE IF EXISTS userdb.member;
-
 
 -- Create the database
 CREATE DATABASE IF NOT EXISTS userdb;
@@ -15,9 +15,3 @@ CREATE TABLE IF NOT EXISTS member (
     user_type ENUM('customer', 'admin', 'customer_rep') NOT NULL  -- User type (customer, admin, or customer rep)
 );
 
-
--- Insert sample data for testing
-INSERT INTO member (uname, password, email, first_name, last_name, user_type) VALUES
-('testCustomer', 'password123', 'customer@example.com', 'Test', 'Customer', 'customer'),
-('testAdmin', 'abc', 'admin@example.com', 'Test', 'Admin', 'admin'),
-('testRep', 'password789', 'rep@example.com', 'Test', 'Rep', 'customer_rep');
